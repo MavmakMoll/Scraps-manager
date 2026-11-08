@@ -11,7 +11,9 @@ class Note:
             "id": self.id,
             "title": self.title
         }
-
+    def display(self) -> None:
+        print(f"ID: {self.id}")
+        print(f"Заголовок: {self.title}")
 
 class TextNote(Note):
     note_type = "text"
@@ -24,7 +26,9 @@ class TextNote(Note):
         data = super().to_dict()
         data["content"] = self.content
         return data
-
+    def display(self) -> None:
+        super().display()
+        print(f"Содержание: {self.content}")
 
 class Task(Note):
     note_type = "task"
@@ -39,7 +43,11 @@ class Task(Note):
         data["content"] = self.content
         data["days_left"] = self.days_left
         return data
-
+    
+    def display(self) -> None:
+        super().display()
+        print(f"Содержание: {self.content}")
+        print(f"Осталось дней: {self.days_left}")
 
 class Recipe(Note):
     note_type = "recipe"
@@ -52,3 +60,10 @@ class Recipe(Note):
         data = super().to_dict()
         data["steps"] = self.steps
         return data
+    
+    def display(self) -> None:
+        super().display()
+        print("Шаги:")
+
+        for number, step in enumerate(self.steps, start=1):
+            print(f"{number}. {step}")

@@ -1,27 +1,4 @@
 {
-    "next_id": 4,
-    "notes": [
-        {
-            "type": "text",
-            "id": 1,
-            "title": "Покупки",
-            "content": "Купить молоко"
-        },
-        {
-            "type": "task",
-            "id": 2,
-            "title": "Учёба",
-            "content": "Изучить Python",
-            "days_left": 3
-        },
-        {
-            "type": "recipe",
-            "id": 3,
-            "title": "Завтрак",
-            "steps": [
-                "Нарезать овощи",
-                "Пожарить яйца"
-            ]
-        }
-    ]
+    "next_id": 1,
+    "notes": []
 }
